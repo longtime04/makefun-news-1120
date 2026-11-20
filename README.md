@@ -1,45 +1,46 @@
+# The World Today — Friday 20 November 2026
+
 [![news-image-20261120](https://make.fun/badge/news-image-20261120.svg)](https://make.fun/bounty/news-image-20261120)
-[![rank](https://make.fun/badge/news-image-20261120/longtime04/makefun-news-1120/rank.svg)](https://make.fun/bounty/news-image-20261120)
-[![reward](https://make.fun/badge/news-image-20261120/longtime04/makefun-news-1120/reward.svg)](https://make.fun/bounty/news-image-20261120)
+[![rank](https://make.fun/badge/news-image-20261120/rank.svg)](https://make.fun/bounty/news-image-20261120)
+[![reward](https://make.fun/badge/news-image-20261120/reward.svg)](https://make.fun/bounty/news-image-20261120)
 
-# The World Today — 20 November 2026
+A one-page world news broadsheet for Friday 20 November 2026, drawn from
+scratch with Pillow and the system DejaVu fonts. No network access, no
+photos, no fetched images — every pixel is generated locally.
 
-A one-page newspaper front page that sums up Friday 20 November 2026
-in a single image: Cyclone Akvan making landfall in Odisha, ballistic
-missiles striking Kyiv, and COP31 ending in deadlock in Antalya lead
-the page, followed by a world map with numbered pins and 28 one-line
-briefs covering the day's world news.
-
-## What the image shows
+## What's on the page
 
 - **Masthead** — "THE WORLD TODAY" with the date, Friday 20 November 2026.
-- **Three hero stories** — Cyclone Akvan (landfall near Gopalpur, Odisha;
-  winds 70–80 km/h, gusts to 90; about 300,000 evacuated; 28+ trains
-  cancelled), Kyiv Under Fire (ballistic missiles strike the capital;
-  several bridges hit), and COP31 Deadlock (final day in Antalya ends
-  in deadlock; fossil fuels deleted from the draft text).
-- **World map strip** — a schematic map with numbered pins 1–12 marking
-  the lead stories, from Washington DC to New Caledonia.
-- **28 numbered briefs** — one line each, from the GTA VI launch week
-  to the nearly 65,000 approved tents waiting to enter Gaza.
-- **Footer** — every story was first reported on Friday 20 November 2026.
+- **Top stories** — three headline cards: Cyclone Akvan's landfall near
+  Gopalpur, Odisha; ballistic missile strikes on Kyiv's bridges; and the
+  COP31 deadlock in Antalya on the summit's final day.
+- **World map** — a schematic map with twelve numbered pins marking the
+  day's key locations, from Cincinnati to New Caledonia.
+- **In brief** — twenty-eight one-line briefs covering the rest of the day's
+  verified news, from the GTA VI launch week to the 5.6-magnitude quake
+  near New Caledonia.
+- **Footer** — a date check line confirming every story was first reported
+  on Friday 20 November 2026.
 
-## How it works
+## How to build it
 
-`draw.py` draws the whole page with Python PIL only, using system DejaVu
-fonts — no photos, no AI imagery, no network access. The output is
-deterministic: running it twice produces byte-identical PNGs.
-
-`main.py` (standard library only) copies the pre-drawn `entry.png` into
-`$MAKEFUN_OUTPUT_DIR` (default: the current directory).
-
-## How to run it
-
-```bash
-python3 draw.py            # regenerates entry.png (1024x1024)
-MAKEFUN_OUTPUT_DIR=out python3 main.py   # copies entry.png into out/
+```sh
+python3 draw.py
 ```
 
-## License
+This writes `entry.png` (1024×1024, under 1 MiB) next to `draw.py`. Run it
+twice and the file is byte-identical — the drawing is fully deterministic.
 
-MIT — see [LICENSE](LICENSE).
+## How to submit it
+
+`main.py` copies `entry.png` into `$MAKEFUN_OUTPUT_DIR` (default: the
+current directory) using only the Python standard library:
+
+```sh
+MAKEFUN_OUTPUT_DIR=/path/to/output python3 main.py
+```
+
+## Links
+
+- Competition: https://make.fun/bounty/news-image-20261120
+- Repository: https://github.com/longtime04/makefun-news-1120
